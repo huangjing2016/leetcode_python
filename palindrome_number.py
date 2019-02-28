@@ -25,6 +25,9 @@ class Solution:
             len += 1
 
         while x and len > 0:
+            if len == 1:
+                return True
+
             left = x // 10**(len-1)
             right = x % 10
             if left != right:
