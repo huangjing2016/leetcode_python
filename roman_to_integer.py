@@ -40,7 +40,7 @@
 # Output: 1994
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 class Solution:
-    def roman2int(self, s: str) -> int:
+    def singleRomanToInt(self, s: str) -> int:
         roman = {
             'I': 1,
             'V': 5,
@@ -61,19 +61,19 @@ class Solution:
         # D             500
         # M             1000
 
-        res = self.roman2int(s[0])
-        if len(s) == 1:
-            return res
+        res = 0
 
         for i in range(len(s) - 1):
-            if self.roman2int(s[i]) < self.roman2int(s[i+1]):
-                res -= self.roman2int(s[i+1])
+            if self.singleRomanToInt(s[i]) < self.singleRomanToInt(s[i+1]):
+                res -= self.singleRomanToInt(s[i])
             else:
-                res += self.roman2int(s[i+1])
+                res += self.singleRomanToInt(s[i])
+
+        res += self.singleRomanToInt(s[-1])
 
         return res
 
 if __name__ == '__main__':
     s = Solution()
-    res = s.romanToInt('IV')
+    res = s.romanToInt('MCMXCIV')
     print(res)
