@@ -35,7 +35,7 @@ class Solution(object):
         """
         if not s:
             return True
-        if not len(s)//2:
+        if len(s) % 2:
             return False
 
         par_dict = {
@@ -54,5 +54,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.isValid('()[]{}')
+    res = solution.isValid('{[]}')
     print(res)
