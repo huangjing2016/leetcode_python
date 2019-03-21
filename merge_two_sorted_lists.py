@@ -24,11 +24,27 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        if not (l1 and l2):
-            return l1 if l1 else l2
 
         res = ListNode(None)
         curr = res
+
+        # while 1:
+        #     if not l1:
+        #         curr.next = l2
+        #         break
+        #
+        #     if not l2:
+        #         curr.next = l1
+        #         break
+        #
+        #     curr.next = ListNode(None)
+        #     curr = curr.next
+        #     if l1.val <= l2.val:
+        #         curr.val = l1.val
+        #         l1 = l1.next
+        #     else:
+        #         curr.val = l2.val
+        #         l2 = l2.next
 
         while l1 and l2:
             curr.next = ListNode(None)
