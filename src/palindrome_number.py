@@ -15,6 +15,7 @@
 # Output: false
 # Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
@@ -39,8 +40,3 @@ class Solution:
             len -= 2
 
         return True
-
-if __name__ == '__main__':
-    s = Solution()
-    result = s.isPalindrome(213212)
-    print(result)

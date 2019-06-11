@@ -72,8 +72,3 @@ class Solution:
         res += self.singleRomanToInt(s[-1])
 
         return res
-
-if __name__ == '__main__':
-    s = Solution()
-    res = s.romanToInt('MCMXCIV')
-    print(res)
