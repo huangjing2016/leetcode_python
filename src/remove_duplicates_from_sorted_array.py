@@ -33,6 +33,7 @@
 #     print(nums[i]);
 # }
 
+
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -47,15 +48,15 @@ class Solution(object):
             if i == res:
                 continue
             if nums[i] > nums[res]:
-                nums[res+1] = nums[i]
+                nums[res + 1] = nums[i]
                 res += 1
 
-        return res+1
+        return res + 1
+
 
 if __name__ == '__main__':
     solution = Solution()
-    nums = [1,2,2,3]
+    nums = [1, 2, 2, 3]
     res = solution.removeDuplicates(nums)
     print(res)
     print(nums)
-
